@@ -11,7 +11,7 @@ function HomePage(props) {
             <div className="bg-gray-900">
                 <div className="m-20  flex  pl-32 pt-20 pb-10 rounded-lg bg-gray-100">
                     <div className="space-y-4">
-                        <span className="text-sky-900 text-2xl font-semibold">Hi I'm Nishant Chaudhary</span>
+                        <span className="text-sky-900 text-4xl font-semibold">Hi I'm Nishant Chaudhary</span>
                         <span className="block text-sky-900 text-5xl font-extrabold font-serif">Full Stack Developer </span>
                         <span className="block text-sky-900 text-4xl font-semibold font-serif">based in New Delhi, India</span>
                         <div className=" px-2 pt-10 w-16 rounded-md">
@@ -74,7 +74,7 @@ function HomePage(props) {
                     </div>
                     <div className="">
                         <div className="flex ml-44 space-x-12">
-                            <img className="w-1/3 border border-black" src="https://cdn.discordapp.com/attachments/921133670830600253/961699193557225582/product-list.jpg" alt="" />
+                            <img className="w-1/3 border  border-black" src="https://cdn.discordapp.com/attachments/921133670830600253/961699193557225582/product-list.jpg" alt="" />
                             <img src="" alt="" />
                             <img className="w-1/3 border-black border" src="https://cdn.discordapp.com/attachments/921133670830600253/961699193079091260/app.codeyogi-clone.jpg" alt="" />
                         </div>

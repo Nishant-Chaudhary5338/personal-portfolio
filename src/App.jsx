@@ -1,3 +1,5 @@
+/** @format */
+
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import AboutPage from "./Pages/AboutPage";
@@ -10,10 +12,10 @@ function App() {
     <div>
       <BrowserRouter>
         <Routes>
-          <Route path="home" element={<HomePage></HomePage>}></Route>
-          <Route path="about" element={<AboutPage></AboutPage>}></Route>
-          <Route path="contact" element={<ContactPage></ContactPage>}></Route>
-          <Route path="enquiry" element={ <EnquiryPage></EnquiryPage>}></Route>
+          <Route path="/home" element={<HomePage></HomePage>}></Route>
+          <Route path="/about" element={<AboutPage></AboutPage>}></Route>
+          <Route path="/contact" element={<ContactPage></ContactPage>}></Route>
+          <Route path="/enquiry" element={<EnquiryPage></EnquiryPage>}></Route>
         </Routes>
       </BrowserRouter>
     </div>
