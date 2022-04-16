@@ -7,6 +7,7 @@ import EmailInputForm from "../Components/EmailInputForm";
 import Footer from "../Components/Footer";
 import NavBar from "./NavBar";
 import Card from "../Components/Card";
+import Button from "../Components/Button";
 
 function ContactPage(props) {
   const [popup, setPopup] = React.useState(false);
@@ -58,17 +59,17 @@ function ContactPage(props) {
             </span>
             <span className="block font-serif font-semibold text-center text-gray-800 text-md">
               If you'd like to talk about a project you want help with or need
-              an advice about product design, just drop me a message at
-              nathan@ojieame.design I'm currently Available for any design
-              systems projects, dashboard designs or landing pages gigs
+              an advice about web development, just drop me a message at
+              nishantchaudhary5338@gmail.com. I'm currently Available for any
+              React Js Web development projects.
             </span>
             {popup && <EmailInputForm close={hideForm}></EmailInputForm>}
-            <button
+            <Button
               onClick={showForm}
-              className="px-6 py-2 text-center text-gray-100 bg-indigo-500 rounded-md "
+              className="px-6 py-2 text-center text-gray-100 bg-indigo-500 rounded-md hover:scale-x-110 "
             >
               Write me an email
-            </button>
+            </Button>
           </div>
         </Card>
         <div className="my-12 text-center">
