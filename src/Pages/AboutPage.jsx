@@ -70,7 +70,7 @@ function AboutPage(props) {
               <Projects image="https://cdn.discordapp.com/attachments/921133670830600253/961699193079091260/app.codeyogi-clone.jpg"></Projects>
             </div>
 
-            <div className="w-64 mx-auto space-y-4 sm:w-96">
+            <div className="w-3/4 mx-auto space-y-4 sm:w-96">
               <div className="mx-auto">
                 <Projects image="https://cdn.discordapp.com/attachments/921133670830600253/961699193284608030/ask-jud.jpg"></Projects>
               </div>

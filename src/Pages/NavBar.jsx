@@ -30,15 +30,21 @@ function NavBar(props) {
                   src="https://img.icons8.com/color/48/000000/back--v1.png"
                 />
               </div>
-              <div className="ml-10 space-y-10">
+              <div className="ml-4 space-y-10">
                 <NavLinks>
-                  <Link to="/home">Home</Link>
+                  <div onClick={hideSideBar}>
+                    <Link to="/home">Home</Link>
+                  </div>
                 </NavLinks>
                 <NavLinks>
-                  <Link to="/about">About</Link>
+                  <div onClick={hideSideBar}>
+                    <Link to="/about">About</Link>
+                  </div>
                 </NavLinks>
                 <NavLinks>
-                  <Link to="/contact">Contact</Link>
+                  <div onClick={hideSideBar}>
+                    <Link to="/contact">Contact</Link>
+                  </div>
                 </NavLinks>
               </div>
             </div>

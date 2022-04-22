@@ -24,7 +24,7 @@ function ContactPage(props) {
     <div className="flex flex-col">
       <div className="bg-gray-900">
         <Card>
-          <div className="px-10 space-y-10 sm:flex sm:justify-between">
+          <div className="space-y-10 sm:px-10 sm:flex sm:justify-between">
             <div className="space-y-6">
               <span className="font-serif text-xl font-semibold text-sky-500">
                 I can help your business to
