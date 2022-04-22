@@ -13,7 +13,6 @@ import TechInfo from "../Components/TechInfo";
 function HomePage(props) {
   return (
     <div className="flex flex-col">
-      <NavBar></NavBar>
       <div className="bg-gray-900">
         <Card>
           <div className="space-y-10 sm:px-20 sm:flex sm:justify-between">

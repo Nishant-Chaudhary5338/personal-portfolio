@@ -32,13 +32,13 @@ function NavBar(props) {
               </div>
               <div className="ml-10 space-y-10">
                 <NavLinks>
-                  <Link to={"/home"}>Home</Link>
+                  <Link to="/home">Home</Link>
                 </NavLinks>
                 <NavLinks>
-                  <Link to={"/about"}>About</Link>
+                  <Link to="/about">About</Link>
                 </NavLinks>
                 <NavLinks>
-                  <Link to={"/contact"}>Contact</Link>
+                  <Link to="/contact">Contact</Link>
                 </NavLinks>
               </div>
             </div>
@@ -48,14 +48,14 @@ function NavBar(props) {
       <div className="hidden sm:block">
         <div className="sticky top-0 flex items-center justify-between h-16 px-20 bg-black">
           <NavLinks>
-            <Link to={"/home"}>Home</Link>
+            <Link to="/home">Home</Link>
           </NavLinks>
           <div className="flex space-x-6">
             <NavLinks>
-              <Link to={"/about"}>About</Link>
+              <Link to="/about">About</Link>
             </NavLinks>
             <NavLinks>
-              <Link to={"/contact"}>Contact</Link>
+              <Link to="/contact">Contact</Link>
             </NavLinks>
           </div>
         </div>

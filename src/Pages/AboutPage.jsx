@@ -15,7 +15,6 @@ import Button from "../Components/Button";
 function AboutPage(props) {
   return (
     <div className="flex flex-col">
-      <NavBar></NavBar>
       <div className="bg-gray-900">
         <Card>
           <div className="space-y-10 sm:px-20 sm:flex sm:space-y-0 sm:justify-between">

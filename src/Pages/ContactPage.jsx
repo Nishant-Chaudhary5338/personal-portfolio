@@ -22,7 +22,6 @@ function ContactPage(props) {
 
   return (
     <div className="flex flex-col">
-      <NavBar></NavBar>
       <div className="bg-gray-900">
         <Card>
           <div className="px-10 space-y-10 sm:flex sm:justify-between">
