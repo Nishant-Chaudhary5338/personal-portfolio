@@ -33,8 +33,8 @@ function HomePage(props) {
             </div>
             <div>
               <img
-                className="mx-auto rounded-full sm:-mt-20 h-80 w-60"
-                src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
+                className="object-cover mx-auto rounded-full sm:-mt-20 h-80 w-60"
+                src="https://cdn.discordapp.com/attachments/921133670830600253/967007231105171496/1650622810268.jpg"
                 alt=""
               />
             </div>
