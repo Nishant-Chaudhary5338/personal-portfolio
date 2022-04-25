@@ -8,7 +8,7 @@ function TechInfo(props) {
       <div className="flex space-x-6 sm:flex-col">
         <div className="">
           <img
-            className="px-10 py-10 rounded-full bg-cyan-400 hover:animate-spin hover:animate-bounce grayscale hover:grayscale-0"
+            className="px-10 py-10 rounded-full  bg-cyan-400 hover:animate-spin hover:animate-bounce grayscale hover:grayscale-0"
             src={props.image}
           />
         </div>
@@ -16,7 +16,7 @@ function TechInfo(props) {
           <div className="text-2xl font-semibold sm:ml-5">
             {props.percentage}
           </div>
-          <div className="font-serif text-sm font-semibold text-gray-700">
+          <div className="font-serif text-sm font-semibold text-gray-700 ">
             {props.name}
           </div>
         </div>

@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 import A from "../Components/A";
 import EmailInputForm from "../Components/EmailInputForm";
 import Footer from "../Components/Footer";
-import NavBar from "./NavBar";
 import Card from "../Components/Card";
 import Button from "../Components/Button";
 
@@ -14,7 +13,6 @@ function ContactPage(props) {
 
   const showForm = () => {
     setPopup(true);
-    console.log("its working");
   };
   const hideForm = () => {
     setPopup(false);

@@ -4,13 +4,44 @@ import React from "react";
 import Card from "../Components/Card";
 import Footer from "../Components/Footer";
 import Input from "../Components/Input";
-import InputLabel from "../Components/InputLabel";
-import NavBar from "./NavBar";
 import Button from "../Components/Button";
 import RedH3 from "../Components/RedH3";
 import GrayH6 from "../Components/GrayH6";
+import { Formik, Form } from "formik";
+import { object, string } from "yup";
+import emailjs from "@emailjs/browser";
 
 function EnquiryPage() {
+  const sendEmail = (object) => {
+    emailjs
+      .send("service_glqvuum", "template_ewvit5p", object, "y6VqMM4L19BUjOBbH")
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
+
+  const validationSchema = object().shape({
+    name: string().required(),
+    organisation: string().required(),
+    email: string().email(),
+    goals: string().required(),
+    timeline: string().required(),
+    budget: string().required(),
+  });
+
+  const initialValues = {
+    name: "",
+    organisation: "",
+    email: "",
+    goals: "",
+    timeline: "",
+    budget: "",
+  };
   return (
     <div className="flex flex-col">
       <div className="bg-gray-900">
@@ -37,36 +68,67 @@ function EnquiryPage() {
               <h3 className="font-serif text-xl font-bold">
                 TELL US ABOUT YOUR PROJECT AND GOALS
               </h3>
-              <div className="space-y-2">
-                <InputLabel>What's your Name?</InputLabel>
-                <Input type="text"></Input>
-              </div>
-              <div className="space-y-2">
-                <InputLabel>What's your Organisation Name?</InputLabel>
-                <Input type="text"></Input>
-              </div>
-              <div className="space-y-2">
-                <InputLabel>What's your Email Address?</InputLabel>
-                <Input type="text"></Input>
-              </div>
-              <div className="space-y-2">
-                <InputLabel>What are your project goals?</InputLabel>
-                <Input type="text"></Input>
-              </div>
-              <div className="space-y-2">
-                <InputLabel>Do you have a timeline in mind?</InputLabel>
-                <Input type="text"></Input>
-              </div>
-              <div className="space-y-2">
-                <InputLabel>What is your budget?</InputLabel>
-                <Input type="number"></Input>
-              </div>
-              <Button className="px-6 py-2 text-white bg-indigo-500">
-                Submit
-              </Button>
-              <p className="font-serif text-sm text-semibold">
-                My Team will get back to you soon
-              </p>
+              <Formik
+                onSubmit={sendEmail}
+                validationSchema={validationSchema}
+                initialValues={initialValues}
+              >
+                <Form>
+                  <div className="space-y-4">
+                    <Input id="name" name="name" autoComplete="name" required>
+                      What's your Name?
+                    </Input>
+
+                    <Input
+                      id="organisation"
+                      name="organisation"
+                      autoComplete="organisation"
+                      required
+                    >
+                      What's your Organisation Name?
+                    </Input>
+
+                    <Input
+                      id="email"
+                      name="email"
+                      autoComplete="email"
+                      type="email"
+                      required
+                    >
+                      What's your Email Address?
+                    </Input>
+
+                    <Input id="goals" name="goals" required>
+                      What are your project goals?
+                    </Input>
+
+                    <Input
+                      id="timeline"
+                      name="timeline"
+                      required
+                      placeholder="In Months"
+                      type="number"
+                    >
+                      Do you have a timeline in mind?
+                    </Input>
+
+                    <Input
+                      id="budget"
+                      name="budget"
+                      type="number"
+                      required
+                      placeholder="In dollars"
+                    >
+                      What is your budget?
+                    </Input>
+
+                    <Button type="submit">Submit</Button>
+                    <p className="font-serif text-sm text-semibold">
+                      My Team will get back to you soon
+                    </p>
+                  </div>
+                </Form>
+              </Formik>
             </div>
           </div>
         </Card>

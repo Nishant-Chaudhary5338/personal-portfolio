@@ -12,6 +12,7 @@ function Button(props) {
   return (
     <button
       onClick={props.onClick}
+      type={props.type}
       className={
         "px-6 py-4 rounded-md text-white font-semibold hover:scale-105 active:bg-black " +
         themeClasses
