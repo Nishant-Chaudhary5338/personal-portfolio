@@ -14,21 +14,25 @@ function EmailInputForm(props) {
       .then(
         (result) => {
           console.log(result.text);
+          props.handleClose();
         },
         (error) => {
           console.log(error.text);
         }
       );
-    {
-      props.close;
-    }
   };
+
   const validationSchema = object().shape({
     email: string().email().required(),
     content: string().required(),
     subject: string().required(),
   });
   const initialValues = {
+    email: "",
+    content: "",
+    subject: "",
+  };
+  const reset = {
     email: "",
     content: "",
     subject: "",
@@ -60,7 +64,7 @@ function EmailInputForm(props) {
             </Input>
             <div>
               <div className="space-x-4">
-                <Button onClick={props.close}>Submit</Button>
+                <Button type="submit">Submit</Button>
                 <Button theme="cancel" onClick={props.close}>
                   Cancel
                 </Button>

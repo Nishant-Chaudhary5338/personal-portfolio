@@ -17,6 +17,9 @@ function ContactPage(props) {
   const hideForm = () => {
     setPopup(false);
   };
+  const closeForm = () => {
+    setPopup(false);
+  };
 
   return (
     <div className="flex flex-col">
@@ -60,13 +63,20 @@ function ContactPage(props) {
               nishantchaudhary5338@gmail.com. I'm currently Available for any
               React Js Web development projects.
             </span>
-            {popup && <EmailInputForm close={hideForm}></EmailInputForm>}
-            <Button
-              onClick={showForm}
-              className="px-6 py-2 text-center text-gray-100 bg-indigo-500 rounded-md hover:scale-x-110 "
-            >
-              Write me an email
-            </Button>
+            {popup && (
+              <EmailInputForm
+                handleClose={closeForm}
+                close={hideForm}
+              ></EmailInputForm>
+            )}
+            {!popup && (
+              <Button
+                onClick={showForm}
+                className="px-6 py-2 text-center text-gray-100 bg-indigo-500 rounded-md hover:scale-x-110 "
+              >
+                Write me an email
+              </Button>
+            )}
           </div>
         </Card>
         <div className="my-12 text-center">
