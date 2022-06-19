@@ -10,9 +10,12 @@ import GrayH6 from "../Components/GrayH6";
 import { Formik, Form } from "formik";
 import { object, string } from "yup";
 import emailjs from "@emailjs/browser";
+import { useContext } from "react";
+import AlertContext from "../Components/AlertContext";
+import Alert from "../Components/Alert";
 
 function EnquiryPage() {
-  const sendEmail = (object) => {
+  /* const sendEmail = (object) => {
     emailjs
       .send("service_glqvuum", "template_ewvit5p", object, "y6VqMM4L19BUjOBbH")
       .then(
@@ -23,6 +26,11 @@ function EnquiryPage() {
           console.log(error.text);
         }
       );
+  };*/
+  const { showAlert } = useContext(AlertContext);
+  const submit = (data) => {
+    console.log(data);
+    showAlert("email sent", "success");
   };
 
   const validationSchema = object().shape({
@@ -46,8 +54,8 @@ function EnquiryPage() {
     <div className="flex flex-col">
       <div className="bg-gray-900">
         <Card>
-          <div className="space-y-10 sm:flex sm:justify-between sm:px-20 sm:space-y-0">
-            <div className="space-y-6">
+          <div className="justify-between space-y-10 lg:flex lg:px-20 lg:space-y-0">
+            <div className="mr-10 space-y-6">
               <div className="font-serif text-xl font-bold">
                 Contact Details
               </div>
@@ -69,7 +77,7 @@ function EnquiryPage() {
                 TELL US ABOUT YOUR PROJECT AND GOALS
               </h3>
               <Formik
-                onSubmit={sendEmail}
+                onSubmit={submit}
                 validationSchema={validationSchema}
                 initialValues={initialValues}
               >
@@ -129,6 +137,9 @@ function EnquiryPage() {
                   </div>
                 </Form>
               </Formik>
+              <button onClick={() => showAlert("email not sent", "error")}>
+                Check error
+              </button>
             </div>
           </div>
         </Card>

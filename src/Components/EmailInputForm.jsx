@@ -6,14 +6,18 @@ import Button from "./Button";
 import { Formik, Form } from "formik";
 import { object, string } from "yup";
 import emailjs from "@emailjs/browser";
+import { useContext } from "react";
+import AlertContext from "./AlertContext";
 
 function EmailInputForm(props) {
+  const { setMessage } = useContext(AlertContext);
   const sendEmail = (object) => {
     emailjs
       .send("service_glqvuum", "template_bf853b9", object, "y6VqMM4L19BUjOBbH")
       .then(
         (result) => {
           console.log(result.text);
+          setMessage("Email send successfully but in red theme");
           props.handleClose();
         },
         (error) => {
